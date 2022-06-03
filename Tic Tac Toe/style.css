@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Ubuntu&family=Varela+Round&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: rgb(54, 26, 54);
+    color: white;
+    height: 45px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    padding: 0 7px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+
+}
+
+.gameContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 22px;
+}
+
+.container {
+    display: grid;
+    font-family: 'Varela Round', sans-serif;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    position: relative;
+}
+
+.box {
+    border: 1px solid black;
+    font-size: 7vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    background-color: rgb(219, 211, 228);
+}
+
+.gameInfo {
+    padding: 0 28px;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+
+.gameInfo h1 {
+    font-size: 1.5rem;
+}
+
+.imgBox img {
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+#reset {
+    margin: 0 10px;
+    padding: 0 7px;
+    background-color: slateblue;
+    color: white;
+    border-radius: 9px;
+    cursor: pointer;
+    font-family: 'Baloo Bhaina 2', cursive;
+    font-size: 1.07rem;
+}
+
+.line {
+    background-color: rgb(71, 48, 87);
+    width: 0;
+    height: 3px;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
+
+.info {
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: 'Varela Round', sans-serif;
+}
+
+@media screen and (max-width:650px) {
+    .gameContainer {
+        flex-wrap: wrap;
+
+    }
+
+    .gameInfo {
+        margin-top: 2rem;
+    }
+
+    .gameInfo h1 {
+        font-size: 1rem;
+    }
+
+    .container {
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+
+    .line {
+        height: 0;
+    }
+}
