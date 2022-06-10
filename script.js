@@ -4,6 +4,7 @@ cross.style.display = 'none';
 const togglebtn = document.querySelector('.toggle-buttons');
 const bar = document.querySelector('.fa-bars');
 const sidebar = document.querySelector('.sidebar');
+
 togglebtn.addEventListener('click', () => {
     sidebar.classList.toggle('sidebarGo');
     // if (sidebar.classList.contains('sidebarGo')) {
@@ -19,7 +20,7 @@ togglebtn.addEventListener('click', () => {
 })
 
 let typed = new Typed('.typing', {
-    strings: ["Student", "Web Developer", "Coder", "Student"],
+    strings: ["Student", "Web Developer", "Student", "Coder"],
     typeSpeed: 100,
     BackSpeed: 60,
     loop: true
